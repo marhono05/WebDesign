@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>INPUTS do HTML 5</title>
+</head>
+<body>
+    <form>
+        Nome<input value="Neto" readonly type="text" name="nome"/><br>
+        <!-- Para um valor definido usar o "value" e para o usuário não modificar colocar o "readonly" -->
+        Idade<input required min="0" max ="130" step="0.5" type="number" name="idade"/><br>
+        <!-- Para ser um campo obrigatório utilizar o "required", "min" é o valor minimo e "max" é o máximo 
+            e step modifica o valor que as setas colocam.  -->
+        E-mail<input placeholder="Digite o seu e-mail" type="email" name="email"/><br>
+        <!-- "placeholder" sublinha um texto de ajuda ao usuário -->
+        Nascimento<input type="date" name="nascimento"/><br>
+        Cor<input type="color" name="cor"/><br>
+        Intervalo<input type="range" name="intervalo"/><br>
+        Senha<input type="password" name="senha"/><br>
+        Estado<select name="estado">
+            <!-- "select" dá opções predefinidas para o usuário selecionar -->
+            <option value="SP">São Paulo</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option selected value="MG">Minas Gerais</option>
+            <option value="ES">Espirito Santo</option>
+            <!-- utilizar o "option" para indicar essas seleções -->
+        </select><br>
+        Observação<textarea name="obs" rows="5" cols="40">Testando</textarea><br>
+        <!-- Uma caixa de texto que possibilita o trabalho com linhas e colunas -->
+
+        Sexo:<input type="radio" name="sexo" value="M" checked/>Masculino
+        <input type="radio" name="sexo" value="F"/>Feminino<br>
+        <!-- O "radio" seleciona um ou outro, os "name" devem ser iguais e o "checked" é usado para um já estar marcado -->
+
+        Cursos:
+        <input type="checkbox" name="curso" value="medio" checked/>Médio
+        <input type="checkbox" name="curso" value="tecnico"/>Técnico
+        <input type="checkbox" name="superior" value="superior"/>Superior<br>
+        <!-- O "checkbox" permite escolher várias opções -->
+        <input type="submit" value="Enviar"/>
+        <input type="reset" value="Limpar"/>
+    </form>
+</body>
+</html>
