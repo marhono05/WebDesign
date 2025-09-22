@@ -1,0 +1,22 @@
+h1 {
+    font-family:"Lucida Sans"; font-size: 30px; background-color: #8F0000; width: 16%; 
+    border-radius: 8px; text-align: center;
+}
+
+h3 {
+    font-family: "Lucida Sans"; font-size: 20x; background-color: #8F0000; width: 16%; 
+    border-radius: 8px; text-align: center;
+}
+
+h4 {
+    font-family:"Lucida Sans"; font-size: 15px; background-color: #8F0000; width: 50%; 
+    border-radius: 8px; text-align: center;
+}
+
+p {
+    font-family: "Lucida Sans";
+}
+
+h2 {
+    font-family: 'Lucida Sans';
+}
