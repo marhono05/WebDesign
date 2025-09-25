@@ -1,0 +1,44 @@
+#paragrafo1 { 
+    /* O # significa que é um ID */
+    color:gray;
+}
+
+.texto-amarelo {
+    /* O . significa que é CLASS */
+    background-color: yellow;
+}
+
+.caixas {
+    height : 300px;
+    width: 300px;
+    background-color: beige;
+    margin: 10px;
+    padding: 30px;
+    box-sizing: border-box;
+    /* Necessário informar no caso da DIV, a altura, largura e cor de fundo */
+    /* Margin é usado para criar espaçamento entre as DIV, utilizar o margin-bottom, margin-top, margin-left, margin-right */
+    /* Usar o Pading para espaçamento interno, utilizar o box-sizing: border-box para padronizar o tamanho das caixas */
+}
+
+#topo {
+    font-size: 75px;
+    height: 120px;
+    width: 1560px;
+    margin: 0px;
+    background-color:yellow;
+}
+
+#rodape {
+    height: 100px;
+    width: 1560px;
+    background-color:brown;
+}
+
+.noticia {
+    height: 230px;
+    width: 400px;
+    background-color: beige;
+    margin: 10px;
+    padding: 30px;
+    box-sizing: border-box;
+}
