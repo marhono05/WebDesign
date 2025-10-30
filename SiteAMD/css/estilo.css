@@ -1,0 +1,153 @@
+h1 {
+    font-family:"Lucida Sans"; font-size: 30px; background-color: #8F0000; width: 16%; 
+    border-radius: 8px; text-align: center;
+}
+
+h3 {
+    font-family: "Lucida Sans"; font-size: 20x; background-color: #8F0000; width: 16%; 
+    border-radius: 8px; text-align: center;
+}
+
+h4 {
+    font-family:"Lucida Sans"; font-size: 15px; background-color: #8F0000; width: 50%; 
+    border-radius: 8px; text-align: center;
+}
+
+p {
+    font-family: "Lucida Sans";
+}
+
+h2 {
+    font-family: 'Lucida Sans';
+}
+
+.indexedit {
+    height: 190px;
+    width: 400px;
+    background-color: #922830;
+    margin: 10px;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.titulos {
+    margin-left: 500px;
+    font-size: 75px;
+    height: 100px;
+    width: 1000px;
+    margin: 10px;
+    background-color: #8F0000;
+}
+
+.menus {
+    /* Usado para as configurações gerais dos botões de MENU */
+    font-size: 35px;
+    margin-top: 100px;
+    background-color: #922830; width: 50%;
+    border-radius: 8px;
+    font-family:"Lucida Sans";    
+}
+
+#menus1 {
+    /* Usado para configuração própria dos botões na página INDEX */
+    font-size: 35px;
+    text-align: left;
+    margin-top: 100px;
+    margin-left: 600px;
+    background-color: #922830; width: 50%; 
+    border-radius: 8px;
+    font-family:"Lucida Sans";
+}
+
+#menus2 {
+    /* Usado para a configuração própria dos botões na página CONTATO */
+    font-size: 35px;
+    margin-top: 100px;
+    margin-left: 700px;
+    background-color: #922830; width: 50%; 
+    border-radius: 8px;
+    font-family:"Lucida Sans";
+}
+
+#menus3 {
+    /* Usado para a configuração própria dos botões na página PRODUTOS/EQUIPE */
+    font-size: 35px;
+    margin-top: 100px;
+    margin-left: 670px;
+    background-color: #922830; width: 50%; 
+    border-radius: 8px;
+    font-family:"Lucida Sans";
+}
+
+#subtitulo1 {
+    margin-left: 63px;
+    margin-top: 50px;
+    margin-right: 1300px;
+}
+
+#subtitulotext1 {
+    margin-right: 100px;
+    height: 190px;
+    width: 400px;
+    background-color: #922830;
+    margin: 10px;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+#subtitulo2 {
+    margin-left: 63px;
+    margin-top: 50px;
+    margin-right: 1300px;
+}
+
+#subtitulo3 {
+    margin-left: 63px;
+    margin-top: 50px;
+    margin-right: 1300px;
+}
+
+#subtituloespec1 {
+    margin-left: 550px;
+    margin-top: -303px;
+    height: 380px;
+    width: 400px;
+    background-color: #922830;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+#imagemespec1 {
+    margin-left: 950px;
+
+}
+
+#subtituloespec2 {
+    margin-left: 550px;
+    margin-top: -303px;
+    height: 450px;
+    width: 400px;
+    background-color: #922830;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+#subtituloespec3 {
+    margin-left: 550px;
+    margin-top: -205px;
+    height: 550px;
+    width: 400px;
+    background-color: #922830;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+#imagemindex {
+    margin-right: 120px;
+    margin-top: -160px;
+}
+
+#imagemspec2 {
+    margin-left: 950px;
+
+}
