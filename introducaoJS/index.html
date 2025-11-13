@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <script>
+        // alert ('Olá Mundo!');
+        console.log('Olá Mundo!');
+
+        function mudarCor() {
+            const elemento = document.getElementById("texto");
+            elemento.style.color = "blue";
+            elemento.style.fontWeight = "bold";
+        }
+
+        function mudarCor1() {
+            const elemento = document.getElementById("texto");
+            elemento.style.color = "black";
+            elemento.style.fontWeight = "1";
+        }
+
+        function pequeno() {
+            document.getElementById("paragrafo").style.fontSize = "12px";
+        }
+
+        function medio() {
+            document.getElementById("paragrafo").style.fontSize = "18px";
+        }
+
+        function grande() {
+            document.getElementById("paragrafo").style.fontSize = "24px";
+        }
+
+        function blackmode() {
+            document.getElementById("body").style.backgroundColor = "black";
+            document.getElementById("loremipsum").style.color = "white";
+            document.getElementById("texto").style.color = "white";
+            document.getElementById("paragrafo").style.color = "white";
+            document.getElementById("backgroundcolor").style.color = "white";
+        }
+
+        function whitemode() {
+            document.getElementById("body").style.backgroundColor = "white";
+            document.getElementById("loremipsum").style.color = "black";
+            document.getElementById("texto").style.color = "black";
+            document.getElementById("paragrafo").style.color = "black";
+            document.getElementById("backgroundcolor").style.color = "black";
+
+            // Ou poderia ter criado uma CLASS para todos os IDs
+        }
+
+
+    </script>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body id="body">
+    <p id="texto">Clique no botão!</p>
+
+    <button onclick="mudarCor()">
+        Mudar Cor
+    </button>
+    
+   
+    <button onclick="mudarCor1()">
+        Mudar Cor
+    </button>
+
+    <p id="paragrafo">Texto de exemplo</p>
+    <button onclick="pequeno()">Pequeno</button>
+    <button onclick="medio()">Médio</button>
+    <button onclick="grande()">Grande</button>
+
+    <p id="backgroundcolor">Cor de fundo!</p>
+    <button onclick="blackmode()">Black Mode</button>
+    <button onclick="whitemode()">White Mode</button>
+
+    <p id="loremipsum"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+         text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
+          survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was 
+          popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with 
+          desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+    
+    
+</body>
+</html>
