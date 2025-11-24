@@ -6,7 +6,17 @@
     
 }
 
-.div1 {
+#lampada {
+    position: fixed;
+    width: 3%;
+    z-index: 1;
+    top: 18%;
+    left: 96%;
+    
+
+}
+
+#div1 {
     background-color: #08158F;
     position: relative;
     width: 100%;
@@ -15,7 +25,7 @@
     
 }
 
-.div2{
+#div2{
     background-color: #1A2CD7;
     position: relative;
     width: 100%;
@@ -85,7 +95,7 @@
     width: 90%;
 }
 
-.divesq {
+#divesq {
     background-color: #08158F;
     width: 5%;
     height: 1000px;
@@ -94,7 +104,7 @@
 
 }
 
-.divdir {
+#divdir {
     background-color: #08158F;
     width: 5%;
     height: 1000px;
@@ -104,7 +114,11 @@
 
 }
 
-.divrodape {
+#fontemais {
+    z-index: 1;
+}
+
+#divrodape {
     background-color: #08158F;
     width: 100%;
     height: 50px;

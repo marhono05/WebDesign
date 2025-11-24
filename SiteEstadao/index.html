@@ -5,33 +5,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Notícias</title>
-</head>
-<body>
 
-    <div class="div2">
+    <script>
+        let alternarCor = true 
+        function mudarCor() {
+            if(alternarCor){
+                document.getElementById("body").style.backgroundColor = "black";
+                document.getElementById("nav").style.backgroundColor = "black";
+                document.getElementById("divesq").style.backgroundColor = "#25262A";
+                document.getElementById("divdir").style.backgroundColor = "#25262A";
+                document.getElementById("divrodape").style.backgroundColor = "#25262A";
+                document.getElementById("div1").style.backgroundColor = "#25262A";
+                alternarCor = false               
+            } else {
+                document.getElementById("body").style.backgroundColor = "white";
+                document.getElementById("nav").style.backgroundColor = "#1A2CD7";
+                document.getElementById("divesq").style.backgroundColor = "#08158F";
+                document.getElementById("divdir").style.backgroundColor = "#08158F";
+                document.getElementById("divrodape").style.backgroundColor = "#08158F";
+                document.getElementById("div1").style.backgroundColor = "#08158F";
+                alternarCor = true
+            }
+            
+        }
+
+    </script>
+</head>
+<body id="body">
+
+    <div id="div2">
     
     <div id="nav">
         <a href="#">Menu</a>
         <a href="#">Notícias</a>
         <a href="#">Buscar</a>
+        
     </div>
     
+    <button onclick="mudarCor()">
+    <img id="lampada" src="imagens/lampada.png">
+    </button>
 
-    <div class="divesq">
+    <div id="divesq">
 
     </div>
     
-    <div class="divdir">
+    <div id="divdir">
+    <p id="fontemais"> + aaaaaaaaaaaaaaaaaa </p> 
 
     </div>
 
-    <div class="divrodape">
+    <div id="divrodape">
 
     </div>
 
     </div>
 
-    <div class="div1">
+    <div id="div1">
         <p id="estadao"> ESTADÃO </p>   
     </div>
 
