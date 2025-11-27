@@ -1,91 +1,128 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <link rel="stylesheet" href="estilos.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <link rel="stylesheet" href="estilos.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Notícias</title>
 
     <script>
-        let alternarCor = true 
-        function mudarCor() {
-            if(alternarCor){
-                document.getElementById("body").style.backgroundColor = "black";
-                document.getElementById("nav").style.backgroundColor = "black";
-                document.getElementById("divesq").style.backgroundColor = "#25262A";
-                document.getElementById("divdir").style.backgroundColor = "#25262A";
-                document.getElementById("divrodape").style.backgroundColor = "#25262A";
-                document.getElementById("div1").style.backgroundColor = "#25262A";
-                alternarCor = false               
-            } else {
-                document.getElementById("body").style.backgroundColor = "white";
-                document.getElementById("nav").style.backgroundColor = "#1A2CD7";
-                document.getElementById("divesq").style.backgroundColor = "#08158F";
-                document.getElementById("divdir").style.backgroundColor = "#08158F";
-                document.getElementById("divrodape").style.backgroundColor = "#08158F";
-                document.getElementById("div1").style.backgroundColor = "#08158F";
-                alternarCor = true
-            }
-            
+      let alternarCor = true;
+      function mudarCor() {
+        if (alternarCor) {
+          document.getElementById("body").style.backgroundColor = "black";
+          document.getElementById("nav").style.backgroundColor = "black";
+          document.getElementById("divesq").style.backgroundColor = "#25262A";
+          document.getElementById("divdir").style.backgroundColor = "#25262A";
+          document.getElementById("divrodape").style.backgroundColor =
+            "#25262A";
+          document.getElementById("div1").style.backgroundColor = "#25262A";
+          alternarCor = false;
+        } else {
+          document.getElementById("body").style.backgroundColor = "white";
+          document.getElementById("nav").style.backgroundColor = "#1A2CD7";
+          document.getElementById("divesq").style.backgroundColor = "#08158F";
+          document.getElementById("divdir").style.backgroundColor = "#08158F";
+          document.getElementById("divrodape").style.backgroundColor =
+            "#08158F";
+          document.getElementById("div1").style.backgroundColor = "#08158F";
+          alternarCor = true;
         }
-
+      }
+      let mudarFonte = true;
+      function aumentarFonte() {
+        if (mudarFonte) {
+          document.getElementById("nav").style.fontSize = "23px";
+          document.getElementById("estadao").style.fontSize = "70px";
+          document.getElementById("estadao").style.top = "16%";
+          document.getElementById("divtext1").style.fontSize = "33px";
+          document.getElementById("divtext1").style.top = "-30px";
+          document.getElementById("divtext2").style.fontSize = "33px";
+          document.getElementById("divtext2").style.top = "-70px";
+          mudarFonte = false;
+        } else {
+          document.getElementById("nav").style.fontSize = "1rem";
+          document.getElementById("estadao").style.fontSize = "3.0em";
+          document.getElementById("estadao").style.top = "20%";
+          document.getElementById("divtext1").style.fontSize = "1.7em";
+          document.getElementById("divtext1").style.top = "-20px";
+          document.getElementById("divtext2").style.fontSize = "1.4em";
+          document.getElementById("divtext2").style.top = "-50px";
+          mudarFonte = true;
+        }
+      }
+      let mudarFonteMenos = true;
+      function diminuirFonte() {
+        if (mudarFonteMenos) {
+          document.getElementById("nav").style.fontSize = "12px";
+          document.getElementById("estadao").style.fontSize = "30px";
+          document.getElementById("estadao").style.top = "29%";
+          document.getElementById("divtext1").style.fontSize = "20px";
+          document.getElementById("divtext1").style.top = "-10px";
+          document.getElementById("divtext2").style.fontSize = "18px";
+          document.getElementById("divtext2").style.top = "-50px";
+          mudarFonteMenos = false;
+        } else {
+          document.getElementById("nav").style.fontSize = "1rem";
+          document.getElementById("estadao").style.fontSize = "3.0em";
+          document.getElementById("estadao").style.top = "20%";
+          document.getElementById("divtext1").style.fontSize = "1.7em";
+          document.getElementById("divtext1").style.top = "-20px";
+          document.getElementById("divtext2").style.fontSize = "1.4em";
+          document.getElementById("divtext2").style.top = "-50px";
+          mudarFonteMenos = true;
+        }
+      }
     </script>
-</head>
-<body id="body">
-
+  </head>
+  <body id="body">
     <div id="div2">
-    
-    <div id="nav">
+      <div id="nav">
         <a href="#">Menu</a>
         <a href="#">Notícias</a>
         <a href="#">Buscar</a>
-        
-    </div>
-    
-    <button onclick="mudarCor()">
-    <img id="lampada" src="imagens/lampada.png">
-    </button>
+      </div>
 
-    <div id="divesq">
+      <button onclick="mudarCor()">
+        <img id="lampada" src="imagens/lampada.png" />
+      </button>
 
-    </div>
-    
-    <div id="divdir">
-    <p id="fontemais"> + aaaaaaaaaaaaaaaaaa </p> 
+      <div id="divesq"></div>
 
-    </div>
+      <div id="divdir"></div>
 
-    <div id="divrodape">
+      <img id="botaomais" src="imagens/botão+.png" onclick="aumentarFonte()" />
 
-    </div>
+      <img id="botaomenos" src="imagens/botão-.png" onclick="diminuirFonte()" />
 
+      <div id="divrodape"></div>
     </div>
 
     <div id="div1">
-        <p id="estadao"> ESTADÃO </p>   
+      <p id="estadao">ESTADÃO</p>
     </div>
 
-    
-    <img class="img1" src="imagens/parafusogigante.jpg">
-    
+    <img class="img1" src="imagens/parafusogigante.jpg" />
 
-    <div class="divtext1">
-        <p> Como são os 'parafusos' gigantes que 
-            <br>
-            vão ajudar na despoluição do Rio Tietê? Entenda </p>
+    <div id="divtext1">
+      <p>
+        Como são os 'parafusos' gigantes que
+        <br />
+        vão ajudar na despoluição do Rio Tietê?
+      </p>
     </div>
 
-    <img class="img2" src="imagens/netflix.jpg">
+    <img class="img2" src="imagens/netflix.jpg" />
 
-    <div class="divtext2">
-        <p> Netflix escancara o custo de fazer negócios no
-            <br>
-            Brasil - e o tributo que só o País tem
-        </p>
+    <div id="divtext2">
+      <p>
+        Netflix escancara o custo de fazer
+        <br />
+        negócios no Brasil!
+      </p>
     </div>
 
-
+    <img id="img3" src="imagens/nene.jpg">
     
-
-</body>
+  </body>
 </html>
