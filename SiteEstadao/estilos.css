@@ -52,6 +52,12 @@
   top: 20%;
 }
 
+#formdesenha {
+  position: absolute;
+  left: 80%;
+  top: 20%;
+}
+
 .img1 {
   border-radius: 10px;
   position: relative;
@@ -89,12 +95,17 @@
 }
 
 #img3 {
-    border-radius: 10px;
-    position: relative;
-    width: 40%;
-    left: 50%;
-    top: -776px;
-    
+  border-radius: 10px;
+  position: relative;
+  width: 40%;
+}
+
+#divtext3 {
+  position: relative;
+  top: -400px;
+  font-size: 1.4em;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  width: 30%;
 }
 
 #divesq {

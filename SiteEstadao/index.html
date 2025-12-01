@@ -72,6 +72,44 @@
           document.getElementById("divtext2").style.top = "-50px";
           mudarFonteMenos = true;
         }
+        function verificarSenhas() {
+          console.log("1"); // Utilizar o console.log para encontrar o erro mais fácil dentro do código, através do inspecionar da página
+          const senha = document.getElementById("senha").value;
+          console.log("2");
+          const confirmarSenha =
+            document.getElementById("confirmarSenha").value;
+          console.log("3");
+          const mensagem = document.getElementById("mensagem");
+          console.log("4");
+
+          if (senha.length == 0) {
+            mensagem.textContent = "Nada foi digitado!";
+            mensagem.style.color = "red";
+            return;
+          }
+          // Verificar o tamanho mínimo da senha
+          if (senha.length < 6) {
+            mensagem.textContent = "A senha deve ter pelo menos 6 caracteres.";
+            mensagem.style.color = "red";
+            return; // Se o if estiver correto, o return vai ignorar o código abaixo
+          }
+
+          var regex = // Verifica se a senha possui os caracteres especiais
+            /^(?=(?:.*?[A-Z]){3})(?=(?:.*?[0-9]){2})(?=(?:.*?[!@#$%*()_+^&}{:;?.]){1})(?!.*\s)[0-9a-zA-Z!@#$%;*(){}_+^&]*$/;
+          // Verificar se as senhas coincidem
+          if (senha === confirmarSenha) {
+            console.log("if");
+            mensagem.textContent = "As senhas coincidem.";
+            mensagem.style.color = "green";
+          } else {
+            console.log("else");
+            mensagem.textContent = "As senhas não coincidem.";
+            mensagem.style.color = "red";
+          }
+          if (!regex.exec(senha))
+            mensagem.textContent =
+              "A senha deve conter no mínimo 3 caracteres em maiúsculo, 2 números e 1 caractere especial!";
+        }
       }
     </script>
   </head>
@@ -100,6 +138,17 @@
 
     <div id="div1">
       <p id="estadao">ESTADÃO</p>
+      <form id="formdesenha">
+        <label>Senha:</label>
+        <input type="password" id="senha" />
+        <br />
+        <label>Confirmar Senha:</label>
+        <input type="password" id="confirmarSenha" />
+        <br />
+        <span id="mensagem" style="color: red; font-size: 14px"></span>
+        <br />
+        <button type="button" onclick="verificarSenhas()">Verificar</button>
+      </form>
     </div>
 
     <img class="img1" src="imagens/parafusogigante.jpg" />
@@ -121,8 +170,5 @@
         negócios no Brasil!
       </p>
     </div>
-
-    <img id="img3" src="imagens/nene.jpg">
-    
   </body>
 </html>
