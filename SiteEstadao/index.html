@@ -31,14 +31,25 @@
       }
       let mudarFonte = true;
       function aumentarFonte() {
+        const largura = window.innerWidth;
+        let textSize = "12px";
+        
+        if (largura < 500) {
+          textSize = "10px";
+        } else if (largura < 800) {
+          textSize = "12px";
+        }
+
         if (mudarFonte) {
-          document.getElementById("nav").style.fontSize = "23px";
-          document.getElementById("estadao").style.fontSize = "70px";
+          document.getElementById("nav").style.fontSize = "1.44em";
+          document.getElementById("estadao").style.fontSize = "4.38em";
           document.getElementById("estadao").style.top = "16%";
-          document.getElementById("divtext1").style.fontSize = "33px";
+          document.getElementById("divtext1").style.fontSize = textSize;
           document.getElementById("divtext1").style.top = "-30px";
-          document.getElementById("divtext2").style.fontSize = "33px";
+          document.getElementById("divtext2").style.fontSize = "2.06em";
           document.getElementById("divtext2").style.top = "-70px";
+          document.getElementById("divtext3").style.fontSize = "2.06em";
+          document.getElementById("divtext3").style.top = "55%";
           mudarFonte = false;
         } else {
           document.getElementById("nav").style.fontSize = "1rem";
@@ -48,19 +59,23 @@
           document.getElementById("divtext1").style.top = "-20px";
           document.getElementById("divtext2").style.fontSize = "1.4em";
           document.getElementById("divtext2").style.top = "-50px";
+          document.getElementById("divtext3").style.fontSize = "1.6em";
+          document.getElementById("divtext3").style.top = "61%";
           mudarFonte = true;
         }
       }
       let mudarFonteMenos = true;
       function diminuirFonte() {
         if (mudarFonteMenos) {
-          document.getElementById("nav").style.fontSize = "12px";
-          document.getElementById("estadao").style.fontSize = "30px";
+          document.getElementById("nav").style.fontSize = "0.75em";
+          document.getElementById("estadao").style.fontSize = "1.88em";
           document.getElementById("estadao").style.top = "29%";
-          document.getElementById("divtext1").style.fontSize = "20px";
+          document.getElementById("divtext1").style.fontSize = "1.25em";
           document.getElementById("divtext1").style.top = "-10px";
-          document.getElementById("divtext2").style.fontSize = "18px";
+          document.getElementById("divtext2").style.fontSize = "1.13em";
           document.getElementById("divtext2").style.top = "-50px";
+          document.getElementById("divtext3").style.fontSize = "1.13em";
+          document.getElementById("divtext3").style.top = "62%";
           mudarFonteMenos = false;
         } else {
           document.getElementById("nav").style.fontSize = "1rem";
@@ -70,49 +85,51 @@
           document.getElementById("divtext1").style.top = "-20px";
           document.getElementById("divtext2").style.fontSize = "1.4em";
           document.getElementById("divtext2").style.top = "-50px";
+          document.getElementById("divtext3").style.fontSize = "1.6em";
+          document.getElementById("divtext3").style.top = "61%";
           mudarFonteMenos = true;
         }
-        function verificarSenhas() {
-          console.log("1"); // Utilizar o console.log para encontrar o erro mais fácil dentro do código, através do inspecionar da página
-          const senha = document.getElementById("senha").value;
-          console.log("2");
-          const confirmarSenha =
-            document.getElementById("confirmarSenha").value;
-          console.log("3");
-          const mensagem = document.getElementById("mensagem");
-          console.log("4");
+      }
+      function verificarSenhas() {
+        console.log("1"); // Utilizar o console.log para encontrar o erro mais fácil dentro do código, através do inspecionar da página
+        const senha = document.getElementById("senha").value;
+        console.log("2");
+        const confirmarSenha = document.getElementById("confirmarSenha").value;
+        console.log("3");
+        const mensagem = document.getElementById("mensagem");
+        console.log("4");
 
-          if (senha.length == 0) {
-            mensagem.textContent = "Nada foi digitado!";
-            mensagem.style.color = "red";
-            return;
-          }
-          // Verificar o tamanho mínimo da senha
-          if (senha.length < 6) {
-            mensagem.textContent = "A senha deve ter pelo menos 6 caracteres.";
-            mensagem.style.color = "red";
-            return; // Se o if estiver correto, o return vai ignorar o código abaixo
-          }
-
-          var regex = // Verifica se a senha possui os caracteres especiais
-            /^(?=(?:.*?[A-Z]){3})(?=(?:.*?[0-9]){2})(?=(?:.*?[!@#$%*()_+^&}{:;?.]){1})(?!.*\s)[0-9a-zA-Z!@#$%;*(){}_+^&]*$/;
-          // Verificar se as senhas coincidem
-          if (senha === confirmarSenha) {
-            console.log("if");
-            mensagem.textContent = "As senhas coincidem.";
-            mensagem.style.color = "green";
-          } else {
-            console.log("else");
-            mensagem.textContent = "As senhas não coincidem.";
-            mensagem.style.color = "red";
-          }
-          if (!regex.exec(senha))
-            mensagem.textContent =
-              "A senha deve conter no mínimo 3 caracteres em maiúsculo, 2 números e 1 caractere especial!";
+        if (senha.length == 0) {
+          mensagem.textContent = "Nada foi digitado!";
+          mensagem.style.color = "red";
+          return;
         }
+        // Verificar o tamanho mínimo da senha
+        if (senha.length < 6) {
+          mensagem.textContent = "A senha deve ter pelo menos 6 caracteres.";
+          mensagem.style.color = "red";
+          return; // Se o if estiver correto, o return vai ignorar o código abaixo
+        }
+
+        var regex = // Verifica se a senha possui os caracteres especiais
+          /^(?=(?:.*?[A-Z]){3})(?=(?:.*?[0-9]){2})(?=(?:.*?[!@#$%*()_+^&}{:;?.]){1})(?!.*\s)[0-9a-zA-Z!@#$%;*(){}_+^&]*$/;
+        // Verificar se as senhas coincidem
+        if (senha === confirmarSenha) {
+          console.log("if");
+          mensagem.textContent = "As senhas coincidem.";
+          mensagem.style.color = "green";
+        } else {
+          console.log("else");
+          mensagem.textContent = "As senhas não coincidem.";
+          mensagem.style.color = "red";
+        }
+        if (!regex.exec(senha))
+          mensagem.textContent =
+            "A senha deve conter no mínimo 3 caracteres em maiúsculo, 2 números e 1 caractere especial!";
       }
     </script>
   </head>
+
   <body id="body">
     <div id="div2">
       <div id="nav">
@@ -168,6 +185,14 @@
         Netflix escancara o custo de fazer
         <br />
         negócios no Brasil!
+      </p>
+    </div>
+
+    <img id="img3" src="imagens/nene.jpg" />
+    <div id="divtext3">
+      <p>
+        Fim de ano seguro: Como transportar crianças com segurança em suas
+        viagens
       </p>
     </div>
   </body>

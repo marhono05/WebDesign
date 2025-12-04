@@ -55,7 +55,8 @@
 #formdesenha {
   position: absolute;
   left: 80%;
-  top: 20%;
+  top: 6%;
+  color: white;
 }
 
 .img1 {
@@ -96,16 +97,21 @@
 
 #img3 {
   border-radius: 10px;
-  position: relative;
+  position: absolute;
   width: 40%;
+  top: 24.6%;
+  left: 52%;
 }
 
 #divtext3 {
-  position: relative;
-  top: -400px;
-  font-size: 1.4em;
+  position: absolute;
+  top: 61%;
+  left: 54%;
+  font-size: 1.6em;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   width: 30%;
+  color: white;
+  z-index: 1;
 }
 
 #divesq {
@@ -157,16 +163,28 @@
   .img1 {
     width: 80%;
   }
-  .divtext1 {
+  #divtext1 {
     font-size: 0.8em;
     top: 8px;
   }
   .img2 {
     width: 80%;
   }
-  .divtext2 {
+  
+  #divtext2 {
     font-size: 0.8em;
     top: -25px;
+  }
+  #img3 {
+    width: 80%;
+    top: 70.7%;
+    left: 8%;
+  }
+  
+  #divtext3 {
+    top: 77%;
+    font-size: 0.8em;
+    left: 10%;
   }
 }
 
@@ -178,4 +196,5 @@
   .img2 {
     width: 80%;
   }
+
 }
